@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { CardPlayerComponent } from '../card-player/card-player.component';
-import { TrackModel } from '@core/models/tracks.model';
+import { LibroCaracteristicaModel } from '@core/models/libro.caracteristica.model';
 
 @Component({
   selector: 'app-section-generic',
@@ -11,9 +11,9 @@ import { TrackModel } from '@core/models/tracks.model';
   styleUrl: './section-generic.component.css'
 })
 export class SectionGenericComponent {
-    @Input() title!: string;
-    @Input() mode: 'small' | 'big' = 'big'
-    @Input() dataTracks: Array<TrackModel> = []  
+  @Input() title!: string;
+  @Input() mode: 'small' | 'big' = 'big'
+  @Input() dataLibroCaracteristica: Array<LibroCaracteristicaModel> = []
   constructor() { }
   ngOnInit(): void {
   }
