@@ -1,0 +1,24 @@
+<div *ngIf="trackName && trackAlbum && trackCover" class="payment-details">
+    <h1>Pagar por: {{ trackName }}</h1>
+    <p>Álbum: {{ trackAlbum }}</p>
+    <img [src]="trackCover" alt="{{ trackName }}">
+  </div>
+  
+  <div class="payment-form">
+    <h2>Detalles de Pago</h2>
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+      <label for="card-name">Nombre en la Tarjeta:</label>
+      <input id="card-name" formControlName="cardName" type="text" required>
+      
+      <label for="card-number">Número de Tarjeta:</label>
+      <input id="card-number" formControlName="cardNumber" type="text" required>
+      
+      <label for="expiry-date">Fecha de Expiración:</label>
+      <input id="expiry-date" formControlName="expiryDate" type="text" required>
+      
+      <label for="cvv">CVV:</label>
+      <input id="cvv" formControlName="cvv" type="text" required>
+      
+      <button type="submit" [disabled]="!paymentForm.valid">Pagar</button>
+    </form>
+  </div>

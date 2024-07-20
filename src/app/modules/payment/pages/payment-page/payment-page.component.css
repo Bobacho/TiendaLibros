@@ -1,0 +1,46 @@
+.payment-details {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .payment-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .payment-form {
+    text-align: center;
+  }
+  
+  .payment-form form {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .payment-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .payment-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  .payment-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .payment-form button:hover {
+    background-color: #218838;
+  }

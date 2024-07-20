@@ -1,0 +1,6 @@
+<div *ngIf="trackName && trackAlbum && trackCover" class="track-details">
+    <h1>{{ trackName }}</h1>
+    <p>Album: {{ trackAlbum }}</p>
+    <img [src]="trackCover" alt="{{ trackName }}">
+    <button (click)="openPaymentPage()">Pagar</button>
+  </div>
