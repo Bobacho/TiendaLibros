@@ -2,9 +2,9 @@
     <h1 class="section-generic_title">{{title}}</h1>
     <div class="section-generic_player-zone">
         <ul class="player-list" [ngClass]="{'card-small': mode === 'small', 'card-big': mode === 'big'}">
-            <li *ngFor="let track of dataTracks">
-                <app-card-player [track]="track" [mode]="mode"></app-card-player>
+            <li *ngFor="let libroCaracteristica of dataLibroCaracteristicas">
+                <app-card-player [libroCaracteristica]="libroCaracteristica" [mode]="mode"></app-card-player>
             </li>
-        </ul> 
+        </ul>
     </div>
 </div>

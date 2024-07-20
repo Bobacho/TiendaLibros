@@ -1,0 +1,35 @@
+
+<div class="carrito-body">
+    <ul class="carrito-table-header">
+        <li (click)= "changeSort('name')" >  Nombre ❤</li>
+        <li (click) = "changeSort('album')" > álbum 🆗</li>
+        <li>fecha incorporación 🍌😁</li>
+        <li><i class="uil uil-clock-eight"></i></li>
+    </ul>
+    <ul class="carrito-rows" *ngFor="let libroCaracteristica of tracks | orderList: optionSort.property:optionSort.order">
+        <li class="libroCaracteristica-name">
+            <ng-container *ngTemplateOutlet="coverSection;context:{libroCaracteristica:track}"></ng-container>
+        </li>
+        <li class="libroCaracteristica-name-opacity">
+            {{libroCaracteristica.titulo}}
+        </li>
+        <li class="libroCaracteristica-name-opacity">
+            {{libroCaracteristica.titulo}}
+        </li>
+        <li class="libroCaracteristica-name-opacity">
+            {{libroCaracteristica.titulo}}
+        </li>
+
+    </ul>
+</div>
+<!--template del cover-->
+<ng-template #coverSection let-libroCaracteristica="libroCarrito">
+    <div class="cover-section">
+        <img appImgBroken class="cover-libroCaracteristica" [src]="libroCarrito.autor" [alt]="libroCarrito.titulo">
+        <div class="cover-info">
+            <div class="name-libroCaracteristica">{{libroCaracteristica.titulo}}</div>
+            <div class="name-libroCaracteristica-details">{{ libroCaracteristica.autor }}</div>
+        </div>
+    </div>
+
+</ng-template>

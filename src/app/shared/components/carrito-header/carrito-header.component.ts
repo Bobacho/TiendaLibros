@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './play-list-header.component.html',
   styleUrl: './play-list-header.component.css'
 })
-export class PlayListHeaderComponent {
+export class CarritoHeaderComponent {
 
 }
